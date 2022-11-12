@@ -1,0 +1,18 @@
+html {
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+.curso {
+    margin-inline-start: -0.5em;
+    margin-inline-end: 70em;
+}
+
+.exp {
+    margin-inline-start: -0.5em;
+    margin-inline-end: 35em;
+}
+
+.formacao {
+    margin-inline-start: -0.5em;
+    margin-inline-end: 60em;
+}

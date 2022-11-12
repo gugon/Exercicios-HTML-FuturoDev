@@ -1,0 +1,44 @@
+html {
+  margin: 2rem 4rem 2rem 4rem;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+  }
+  
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+  
+  /* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+img {
+  height: 3cm;
+  width: 4cm;
+}
+  
+.top{
+
+  word-wrap:break-word;
+  width: 400px; 
+  
+
+}
+ 

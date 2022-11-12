@@ -1,0 +1,38 @@
+
+html {
+    margin: 2rem 4rem 2rem 4rem;
+}
+.title{
+    margin-left: 1cm;
+}
+.jumbotron {
+    display: flex;
+    /* margin: 2rem 4rem 2rem 4rem; */
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.foto {
+    max-width:30%;    
+    height:auto;
+}
+
+img {
+   
+    max-width:100%;
+    height:auto;
+    float:left;
+    margin:2px;
+    border:1px solid gray;
+    cursor: pointer;
+    
+}
+
+.dados-pessoais {
+    max-width:50%;    
+}
+
+.table {
+    max-width: 30%;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles06.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <h1>Curriculum Vitae</h1>
+
+</head>
+    
+    
+</head>
+
+<header>
+   
+    <div class="jumbotron jumbotron-fluid">
+        
+        
+        <section class="foto">                
+            <figure>
+                <img onfocus="mudaBorda()" src="https://thumbs.dreamstime.com/z/brown-wood-owl-strix-leptogrammica-portrait-head-very-close-up-260256025.jpg" 
+                alt="Minha Figura" class="img-thumbnail" id="idImage" onmouseover="mOver(this)" onmouseout="mOut(this)" onclick="clique(this)">  
+            </figure>
+        </section>
+        <section class="dados-pessoais">          
+                <p class="name" id="idName">
+                   <b>Nome:</b>                   
+                    Gustavo Wagner Gonçalves
+                </p>                
+                <p><b>E-mail:</b> gugon19@gmail.com </p>
+                <p><b>Gênero:</b> Masculino</p>
+                <p><b>Estado Civil:</b> Solteiro </p>
+        </section>
+    </div>
+  
+</header>
+
+<body>      
+
+    <section>        
+        <p><b>Endereço:</b>
+            <hr>
+            <b>Logradouro:</b> Rua léo Augusto petry
+            <br><b>Cidade/UF:</b> São José/SC
+            <br><b>Bairro:</b> Praia Comprida
+            <br><b>CEP:</b> 88103-610      
+        <p>&nbsp;
+    </section>    
+
+    <section>
+        <p><b>Objetivo / Área de interesse :</b>
+            <hr>
+            <div class="top">                
+                Tenho como interesse trabalhar em uma área utilizando programação,
+                possuo tenho como interesse e preferência uma vaga de Front end,
+                mas também me interessa Back end.                
+            </div>
+            <p>&nbsp;
+    </section>
+    
+    <section>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Idioma</th>
+                <th>Nível</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Português</td>
+                <td>Avançado</td>
+              <tr>
+                <td>Inglês</td>
+                <td>Básico</td>
+              </tr>
+              <tr>
+                <td>Espanhol</td>
+                <td>Básico</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+
+    <section> 
+        <hr>      
+            <ul class="btn-group-vertical">
+               <a href="/pagesExtras/FormacaoAcademica.html" class="btn btn-light">Formação Acadêmica</a>
+               <a href="/pagesExtras/Cursos.html" class="btn btn-light">Cursos realizados</a>
+               <a href="/pagesExtras/ExperienciasProficionais.html" class="btn btn-light">Experiência profissional</a>
+            </ul>    
+    </section>
+
+    <section>
+        <hr>
+        Expertises -
+        <a href="https://www.youtube.com/watch?v=QiH2GA5Ah2U&ab_channel=IFSCSaoJose"> Clique aqui </a>
+    </section>
+
+    <aside>
+        <hr>
+        Veja os cursos que o IFSC tem disponível -
+        <a href="https://www.ifsc.edu.br/cursos"> Clique aqui </a>
+    </aside>
+    
+    <footer>
+        <hr>
+        No momento cursando terceiro modulo do Curso<br>
+        FuturoDev do SENAI<br>
+        <details ontoggle="myFunction()">
+            <summary>Entre em contato</summary>
+            <form action="/formulario-contato" method="post">
+                <div  class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="texto" class="form-control" id="nome" name="nome_usuario">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email_usuario">
+                </div>
+                <div class="form-group">
+                    <label for="texto">Texto:</label>
+                    <textarea id="texto"class="form-control" name="texto_usuario"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </details> 
+        <hr>
+        <p id="idData"></p>
+    </footer>   
+    
+    <script type="text/javascript">
+        function mOver(obj)
+        {
+            obj.style.border= "10px solid gray"            
+        }
+
+        function mOut(obj)
+        {   
+            obj.style.border= "1px solid gray"           
+        }
+
+        function clique(obj){
+            obj.style.border= "10px solid gray"
+        }
+
+
+        function dataHoje() {
+            let d = new Date();
+            var data = new Date()
+            dia  = data.getDate().toString().padStart(2, '0')
+            mes  = (data.getMonth()+1).toString().padStart(2, '0')
+            ano  = data.getFullYear()
+            hora = data.getHours()
+            minutos = data.getMinutes()
+            segundos = data.getSeconds()
+            const para = document.createElement("p");
+            const string = "Você acessou esta página no dia " + dia + "/" + mes + "/" + ano + ", as " + hora + ":" + minutos + ":" + segundos
+                
+            const node = document.createTextNode(string);
+            para.appendChild(node);
+            const element = document.getElementById("idData");
+            element.appendChild(para);
+        }
+
+        function nomeUser () {
+            let element = document.querySelector("#idName")                                 
+            alert(element.innerText + " está empregado no momento!")
+        }
+        var nome = document.getElementById("idName");
+        nome.addEventListener("click", nomeUser);
+
+        dataHoje()
+    </script>
+
+
+</body>
+
+
+
+</html>
